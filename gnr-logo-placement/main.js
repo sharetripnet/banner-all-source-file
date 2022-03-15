@@ -6,6 +6,7 @@ document.querySelector('#app').innerHTML = `
     bottom: 0;
     right: 24px;
     transform: translate(100%, 0);
+    transition: .5s;
 ">
 
     <div class="img" style="

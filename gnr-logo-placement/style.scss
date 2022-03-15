@@ -11,4 +11,10 @@
   border: 2px solid #ddd;
   width: 400px;
   height: 400px;
+  overflow: hidden;
+}
+
+.gnr-logo:hover {
+  right: 10px;
+  transform: translate(10%, 0%)!important;
 }
