@@ -1,4 +1,4 @@
-# Here have all kind creatives source file.
+# Here Have All Kind Creatives Source File.
 
 ## Google Web Designer(GWD) Source Files
 
