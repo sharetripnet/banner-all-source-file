@@ -1,36 +1,7 @@
-/**************************************
-// Default CSS
-**************************************/
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
 .main {
     width: 72.8rem;
     height: 9rem;
-    background-image: url("../img/4.gif");
+    background-image: url("../../images/4.gif");
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -135,7 +106,7 @@ img {
     font-size: 7rem;
     font-weight: 700;
     font-family: 'Mountains of Christmas', cursive;
-    background-image: url('../img/9.gif');
+    background-image: url('../../images/9.gif');
     background-position: center;
     background-image: text;
     -webkit-background-clip: text;

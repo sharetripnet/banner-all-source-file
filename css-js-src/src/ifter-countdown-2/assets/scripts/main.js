@@ -1,26 +1,3 @@
-
-// $(document).ready(function () {
-//     var clock = $('.clock').FlipClock({
-//         clockFace: 'HourlyCounter',
-//         autoStart: true,
-//         callbacks: {
-//             stop: function () {
-//                 $('.message').html('The clock has stopped!')
-//             }
-//         },
-//         animationRate: 1000
-//     });
-
-//     // set time
-//     clock.setTime(66600);
-
-//     // countdown mode
-//     clock.setCountdown(true);
-
-//     // start the clock
-//     clock.start();
-// });
-
 /* ********************************** */
 /* Custom Scripts */
 /* ********************************** */
@@ -72,8 +49,6 @@
     $(window).on('load', function () {
         textAnimation();
         OnlyHour();
-
-
     });
 
 
