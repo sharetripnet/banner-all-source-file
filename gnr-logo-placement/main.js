@@ -5,7 +5,8 @@ document.querySelector('#app').innerHTML = `
     position: absolute;
     bottom: 0;
     right: 24px;
-    transform: translate(100%, 0);
+    transform: translateX(100%);
+    cursor: pointer;
 ">
 
     <div class="img" style="
@@ -25,6 +26,18 @@ document.querySelector('#app').innerHTML = `
     </div>
 </div>
 `
+
+var logo = document.querySelector('.gnr-logo');
+
+logo.addEventListener('mouseover', function () {
+    logo.style.transform = "translateX(10%)";
+    logo.style.transition = ".5s"
+});
+
+logo.addEventListener('mouseleave', function () {
+    logo.style.transform = "translateX(100%)"
+});
+
 
 
 
