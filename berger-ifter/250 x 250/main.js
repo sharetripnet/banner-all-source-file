@@ -150,14 +150,18 @@ var RamdanData = [
         "DATE": "2022-05-02",
         "SEHR": "03:58",
         "IFTAR": "18:31"
+    },
+    {
+        "DATE": "2022-05-03",
+        "SEHR": "03:58",
+        "IFTAR": "18:31"
     }
 ];
-
 
 var bengaliNumbers = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
 
 
-let dummyTime = moment.utc("2022-04-13T01:00:00.000Z");
+let dummyTime = moment.utc("2021-04-13T01:00:00.000Z");
 
 function init() {
 
@@ -183,6 +187,7 @@ function init() {
 
     for (let i = 0; i < RamdanData.length; i++) {
         let data = RamdanData[i];
+        console.log('My Data ' + data);
         let nextDaydata = RamdanData[i + 1];
         if (data.DATE === CurrentdhakaTimeDateString) {
 
