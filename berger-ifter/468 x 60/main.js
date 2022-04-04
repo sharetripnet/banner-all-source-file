@@ -187,7 +187,6 @@ function init() {
 
     for (let i = 0; i < RamdanData.length; i++) {
         let data = RamdanData[i];
-        console.log('My Data ' + data);
         let nextDaydata = RamdanData[i + 1];
         if (data.DATE === CurrentdhakaTimeDateString) {
 
