@@ -1,4 +1,3 @@
-
 # Note: This template are not working for gwd template
 
 # Add Template Designs
@@ -11,7 +10,7 @@ To install gulp globally (Command needed if gulp cli is missing from machine)
 npm install --global gulp-cli
 ```
 
-Clone and run
+Clone and Run for install dependencies:
 
 ```bash
 yarn
@@ -30,6 +29,12 @@ or
 ```
 
 ## Usage
+
+### To Run this project on your browser simply run:
+
+```bash
+gulp
+```
 
 Working Folder Structure:
 
