@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LaunchPad Slider</title>
+
+   <link rel="stylesheet" href="assets/css/slick-theme.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+   <div class="slider_wrapper">
+      <div class="slider_content">
+         <div class="s_item">
+            <img src="assets/images/kv.png" alt="Image" class="img_1">
+         </div>
+         <div class="s_item">
+            <img src="assets/images/text.png" alt="Image" class="img_2">
+         </div>
+         <div class="s_item">
+            <img src="assets/images/Prizes-gdn.png" alt="Image" class="img_3">
+         </div>
+         <div class="s_item">
+            <div class="ra-btn">
+               <a href="#">
+                  <img src="assets/images/button.png" alt="Image" class="img_4-button">
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="assets/js/slick.min.js"></script>
+   <script>
+      $('.slider_content').slick({
+         dots: false,
+         infinite: true,
+         autoplay: true,
+         speed: 1000,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         cssEase: 'cubic-bezier(.65,.25,.53,.82)'
+      });
+   </script>
+</body>
+
+</html>

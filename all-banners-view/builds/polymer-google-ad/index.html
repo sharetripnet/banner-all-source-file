@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Polymer Ads 300x250</title>
+
+   <!--Style-->
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         -webkit-box-sizing: inherit;
+         box-sizing: inherit;
+      }
+
+      html {
+         font-size: 62.5%;
+      }
+
+      body {
+         -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+      }
+
+      img {
+         max-width: 100%;
+         width: 100%;
+         height: auto;
+      }
+
+
+      .polymer_bg {
+         background-image: url("img/bg.png");
+         position: relative;
+         width: 30rem;
+         height: 25rem;
+         margin: auto;
+         overflow: hidden;
+      }
+
+      .abs-btn {
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: transparent;
+         width: 30rem;
+         height: 25rem;
+         z-index: 1;
+      }
+
+      .pl_img {
+         position: absolute;
+         -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+      }
+
+      .pl_img_anower {
+         top: 5%;
+         left: 5%;
+         width: 5rem;
+
+         -webkit-animation-name: moveToRight;
+
+         animation-name: moveToRight;
+         -webkit-animation-duration: 1s;
+         animation-duration: 1s;
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+      }
+
+      .pl_img_no_1 {
+         width: 7.5rem;
+         left: 50%;
+         -webkit-transform: translateX(-50%);
+         -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
+
+         -webkit-animation-name: polymerBottomToTop;
+
+         animation-name: polymerBottomToTop;
+         -webkit-animation-duration: 1s;
+         animation-duration: 1s;
+         -webkit-animation-timing-function: ease-in;
+         animation-timing-function: ease-in;
+         -webkit-animation-fill-mode: both;
+         animation-fill-mode: both;
+      }
+
+      .pl_img_pipe {
+         width: 10rem;
+         right: 5%;
+         top: 37%;
+         -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%);
+
+         -webkit-animation-name: pipeMoveToLeft;
+
+         animation-name: pipeMoveToLeft;
+         -webkit-animation-duration: 3s;
+         animation-duration: 3s;
+         -webkit-animation-delay: 2s;
+         animation-delay: 2s;
+         -webkit-animation-iteration-count: infinite;
+         animation-iteration-count: infinite;
+         -webkit-animation-timing-function: ease-out;
+         animation-timing-function: ease-out;
+         -webkit-animation-fill-mode: backwards;
+         animation-fill-mode: backwards;
+      }
+
+      .pl_img_polymer {
+         width: 10rem;
+         right: 5%;
+         top: 5%;
+
+         -webkit-animation: moveToLeft ease-in 1s;
+
+         animation: moveToLeft ease-in 1s;
+      }
+
+      .pl_img_pump {
+         width: 11rem;
+         top: 37%;
+         left: 5%;
+         -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%);
+
+         -webkit-animation: pumpRound ease-out 3s infinite;
+
+         animation: pumpRound ease-out 3s infinite;
+         -webkit-animation-delay: 2s;
+         animation-delay: 2s;
+         -webkit-animation-fill-mode: backwards;
+         animation-fill-mode: backwards;
+      }
+
+      .pl_img_long_pump {
+         top: 50%;
+         left: 50%;
+         width: 4rem;
+         -webkit-transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+
+         -webkit-animation-name: longPump;
+
+         animation-name: longPump;
+         -webkit-animation-duration: 2s;
+         animation-duration: 2s;
+         -webkit-animation-delay: 1.5s;
+         animation-delay: 1.5s;
+         -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+         transition-timing-function: ease;
+         -webkit-animation-fill-mode: backwards;
+         animation-fill-mode: backwards;
+      }
+
+
+
+      /**********************************************
+   / Animation / 
+   *************************************************/
+
+      @-webkit-keyframes moveToRight {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+         }
+      }
+
+      @keyframes moveToRight {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+         }
+      }
+
+
+      @-webkit-keyframes moveToLeft {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+         }
+      }
+
+
+      @keyframes moveToLeft {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+         }
+      }
+
+      @-webkit-keyframes pumpRound {
+         0% {
+            opacity: 0;
+            -webkit-transform: scale(2);
+            transform: scale(2);
+         }
+
+         40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+         }
+
+         60% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1)
+         }
+      }
+
+      @keyframes pumpRound {
+         0% {
+            opacity: 0;
+            -webkit-transform: scale(2);
+            transform: scale(2);
+         }
+
+         40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+         }
+
+         60% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1)
+         }
+      }
+
+      @-webkit-keyframes longPump {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+            transform: translateX(-50%) translateY(-50%) scale(0);
+            top: 50%;
+            left: 50%;
+         }
+
+         10% {
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(2);
+            transform: translateX(-50%) translateY(-50%) scale(2);
+            top: 50%;
+            left: 50%;
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+            top: 50%;
+            left: 50%;
+         }
+      }
+
+      @keyframes longPump {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+            transform: translateX(-50%) translateY(-50%) scale(0);
+            top: 50%;
+            left: 50%;
+         }
+
+         10% {
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(2);
+            transform: translateX(-50%) translateY(-50%) scale(2);
+            top: 50%;
+            left: 50%;
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+            transform: translateX(-50%) translateY(-50%) scale(1);
+            top: 50%;
+            left: 50%;
+         }
+      }
+
+      @-webkit-keyframes pipeMoveToLeft {
+         0% {
+            opacity: 0;
+            -webkit-transform: scale(2);
+            transform: scale(2);
+         }
+
+         40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+         }
+
+         60% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1)
+         }
+      }
+
+      @keyframes pipeMoveToLeft {
+         0% {
+            opacity: 0;
+            -webkit-transform: scale(2);
+            transform: scale(2);
+         }
+
+         40% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+         }
+
+         60% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5);
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1)
+         }
+      }
+
+      @-webkit-keyframes polymerBottomToTop {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-50%) translateY(3rem);
+            transform: translateX(-50%) translateY(3rem);
+            left: 50%;
+            bottom: 0;
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(-50%) translateY(0rem);
+            transform: translateX(-50%) translateY(0rem);
+            left: 50%;
+            bottom: 0;
+         }
+      }
+
+      @keyframes polymerBottomToTop {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(-50%) translateY(3rem);
+            transform: translateX(-50%) translateY(3rem);
+            left: 50%;
+            bottom: 0;
+         }
+
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(-50%) translateY(0rem);
+            transform: translateX(-50%) translateY(0rem);
+            left: 50%;
+            bottom: 0;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="polymer_bg">
+      <div class="pl_img pl_img_anower">
+         <img src="img/anower.png" alt="Polymer">
+      </div>
+      <div class="pl_img pl_img_no_1">
+         <img src="img/no-1.png" alt="Polymer">
+      </div>
+      <div class="pl_img pl_img_pipe">
+         <img src="img/pipe.png" alt="Polymer">
+      </div>
+      <div class="pl_img pl_img_polymer">
+         <img src="img/polymer.png" alt="Polymer">
+      </div>
+      <div class="pl_img pl_img_pump">
+         <img src="img/pump.png" alt="Polymer">
+      </div>
+      <div class="pl_img pl_img_long_pump">
+         <img src="img/long-pump.png" alt="Polymer">
+      </div>
+
+      <a href="https://sharetrip.net/" class="abs-btn" target="_blank"></a>
+   </div>
+</body>
+
+</html>

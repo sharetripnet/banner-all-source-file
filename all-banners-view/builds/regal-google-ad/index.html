@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regal Google Ad</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        .regal {
+            position: relative;
+            overflow: hidden;
+            width: 30rem;
+            height: 25rem;
+            margin: 0 auto;
+        }
+
+        .abs-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            width: 30rem;
+            height: 25rem;
+            z-index: 1;
+        }
+
+        .regal__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30rem;
+            height: 25rem;
+            background-color: transparent;
+
+            -webkit-animation-name: fadeInOut;
+
+            animation-name: fadeInOut;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-duration: 7s;
+            animation-duration: 7s;
+        }
+
+        .regal__img:nth-child(1) {
+            -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+        }
+
+        .regal__img:nth-child(2) {
+            -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+        }
+
+        .regal__img:nth-child(3) {
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+
+        .regal__img:nth-child(4) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        /********************************************************
+            / Animation /
+        ********************************************************/
+
+        @-webkit-keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+
+            17% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            92% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 1;
+            }
+
+            17% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            92% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="regal">
+        <div class="regal__img regal__img-4">
+            <img src="img/4.png" alt="Regal Image">
+        </div>
+        <div class="regal__img regal__img-3">
+            <img src="img/3.png" alt="Regal Image">
+        </div>
+        <div class="regal__img regal__img-2">
+            <img src="img/2.png" alt="Regal Image">
+        </div>
+        <div class="regal__img regal__img-1">
+            <img src="img/1.png" alt="Regal Image">
+        </div>
+
+        <a href="https://sharetrip.net/" class="abs-btn" target="_blank"></a>
+    </div>
+</body>
+
+</html>
