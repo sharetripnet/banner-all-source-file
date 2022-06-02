@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Regal Google Ad</title>
+
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         -webkit-box-sizing: inherit;
+         box-sizing: inherit;
+      }
+
+      html {
+         font-size: 62.5%;
+      }
+
+      body {
+         -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+      }
+
+      img {
+         max-width: 100%;
+         width: 100%;
+         height: auto;
+      }
+
+      .regal {
+         position: relative;
+         overflow: hidden;
+         width: 30rem;
+         height: 25rem;
+         margin: 0 auto;
+      }
+
+      .regal__img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 30rem;
+         height: 25rem;
+         background-color: transparent;
+
+
+      }
+
+
+      .regal__img:nth-child(3) {
+         transform-origin: 50% 50%;
+         animation: scale-up-down 4.4s linear 0s 1 normal forwards;
+         animation-iteration-count: infinite;
+         width: 301px;
+         height: 251px;
+         top: 0px;
+         left: 0px;
+         transform-origin: 230px 225.84px 0px;
+         transform: scale3d(1, 1, 1);
+         z-index: 3;
+      }
+
+      /********************************************************
+          / Animation /
+      ********************************************************/
+
+      @keyframes scale-up-down {
+         0% {
+            transform: scale3d(1, 1, 1);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         27% {
+            transform: scale3d(1, 1, 1);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         27.5% {
+            transform: scale3d(.78, .78, .78);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         31.5% {
+            transform: scale3d(1, 1, 1);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         56% {
+            transform: scale3d(1, 1, 1);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         61% {
+            transform: scale3d(.78, .78, .78);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         90% {
+            transform: scale3d(1.18, 1.18, 1.18);
+            animation-timing-function: linear;
+            transform-origin: 230px 225.84px 0px;
+         }
+
+         100% {
+            transform: scale3d(.001, .001, .001);
+            animation-timing-function: ease-in;
+            transform-origin: 230px 225.84px 0px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+<div class="regal">
+   <div class="regal__img regal__img-4">
+      <img src="img/4.png" alt="Regal Image">
+   </div>
+   <div class="regal__img regal__img-3">
+      <img src="img/3.png" alt="Regal Image">
+   </div>
+   <div class="regal__img regal__img-2">
+      <a href="https://sharetrip.net/" target="_blank"><img src="img/2.png" alt="Regal Image"></a>
+   </div>
+   <div class="regal__img regal__img-1">
+      <img src="img/1.png" alt="Regal Image">
+   </div>
+</div>
+</body>
+
+</html>
