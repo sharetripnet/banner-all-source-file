@@ -14,6 +14,20 @@
          }
 
          function step2() {
+            // Comming
+            $('.img-3').animate({
+               top: '0',
+               opacity: '1'
+            }, 1000, function () {
+               $('.img-4').animate({
+                  left: '0%'
+               }, 1000, function () {
+                  step3();
+               });
+            });
+         }
+
+         function step3() {
             // Going Back
             $('.img-4').animate({
                left: '-100%'
@@ -48,7 +62,7 @@
       function run() {
 
          init();
-         val = setInterval(init, 6000);
+         val = setInterval(init, 8000);
       }
       run();
 
