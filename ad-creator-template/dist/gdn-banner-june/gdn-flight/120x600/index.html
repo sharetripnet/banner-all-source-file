@@ -29,51 +29,12 @@
                   $('.img-3').animate({
                      opacity: '0',
                      top: '-100%'
+                  }, 400, function () {
+                     reset();
                   })
-                  // reset();
                });
             });
          }
-
-         // function step3() {
-         //    // Coming
-         //    $('.img-4').animate({
-         //       left: '0%'
-         //    }, 500, function () {
-         //       $('.img-5').animate({
-         //          opacity: '1'
-         //       }, 1000, function () {
-         //          step4();
-         //       }
-         //          // 1000, function () {
-         //          //    $('.img-8').animate({
-         //          //       opacity: '1'
-         //          //    }, 1000, function () {
-         //          //       step4();
-         //          //    }
-         //          //    );}
-         //       );
-         //    });
-
-         // }
-
-         // function step4() {
-         //    // Going Back
-
-         //    $('.img-5').animate({
-         //       opacity: '0'
-         //    }, 400, function () {
-         //       $('.img-4').animate({
-         //          left: '100%'
-         //       }, 500, function () {
-         //          $('.img-3').animate({
-         //             top: '-100%',
-         //          }, 500, function () {
-         //             reset();
-         //          });
-         //       });
-         //    });
-         // 
 
          step1()
 
@@ -93,7 +54,6 @@
          });
          $('.img-5').css({
             opacity: '0',
-            top: '100%'
          });
       }
 
