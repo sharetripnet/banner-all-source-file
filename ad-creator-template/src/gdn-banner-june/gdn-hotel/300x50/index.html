@@ -6,27 +6,19 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>LaunchPad Slider</title>
+   <title>Gdn Slider</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
    <link rel="stylesheet" href="gdn-banner-june/gdn-hotel/300x50/assets/style/style.css" inline>
 </head>
-
 
 <body>
    <div class="slider_wrapper">
       <div class="slider_content">
-         <img src="1.png" alt="Image" class="img img-1">
-         <img src="2.png" alt="Image" class="img img-2">
-         <img src="4.png" alt="Image" class="img img-4">
-         <img src="5.png" alt="Image" class="img img-5">
-         <img src="6.png" alt="Image" class="img img-6">
-         <img src="7.png" alt="Image" class="img img-7">
-         <img src="8.png" alt="Image" class="img img-8">
-         <img src="9.png" alt="Image" class="img img-9">
-         <img src="10.png" alt="Image" class="img img-10">
-         <img src="11.png" alt="Image" class="img img-11">
+         <img src="1.png" alt="Image" class="img img-1" />
+         <img src="2.png" alt="Image" class="img img-2" />
+         <img src="3.png" alt="Image" class="img img-3" />
+         <img src="4.png" alt="Image" class="img img-4" />
+         <img src="5.png" alt="Image" class="img img-5" />
       </div>
    </div>
 
@@ -35,103 +27,58 @@
       function init() {
          function step1() {
             // Comming
-            $('.img-4').animate({
-               top: '0'
-            }, 1000, function () {
-               $('.img-5').animate({
-                  opacity: '1'
-               }, 500, function () {
-                  $('.img-6').animate({
-                     opacity: '1'
-                  }, 1000, function () {
-                     step2();
-                  });
-               });
+            $('.img-3').animate({
+               top: '0',
+               opacity: '1'
+            }, 1500, function () {
+               step2();
             });
          }
 
          function step2() {
-            // Going Back
-            $('.img-5').animate({
-               opacity: '0'
+            // Comming
+            $('.img-3').animate({
+               top: '0',
+               opacity: '1'
             }, 1000, function () {
-               $('.img-6').animate({
-                  opacity: '0'
-               }, 1000, function () {
-                  step3();
-               });
+               step3();
             });
          }
 
          function step3() {
-            // Coming
-            $('.img-4').animate({
-               top: '0',
-               left: '-47%'
-            }, 500, function () {
-               $('.img-7').animate({
-                  opacity: '1'
-               }, 1000, function () {
-                  $('.img-8').animate({
-                     opacity: '1'
-                  }, 1000, function () {
-                     step4();
-                  });
-               });
+            // Going Back
+            $('.img-3').animate({
+               opacity: '0',
+               top: '-100%'
+            }, 1000, function () {
+               step4();
             });
          }
 
          function step4() {
-            // Going Back
+            // Comming
             $('.img-4').animate({
-               top: '100%',
-               left: '-47%'
-            }, 500, function () {
-               $('.img-7').animate({
-                  opacity: '0'
-               }, 500, function () {
-                  $('.img-8').animate({
-                     opacity: '0'
-                  }, 1000, function () {
-                     step5();
-                  });
+               left: '0%'
+            }, 1000, function () {
+               $('.img-5').animate({
+                  opacity: '1'
+               }, 1000, function () {
+                  step5();
                });
             });
-
          }
 
          function step5() {
             // Comming
-            $('.img-9').animate({
-               opacity: '1'
-            }, 100, function () {
-               $('.img-10').animate({
+            $('.img-4').animate({
+               left: '0%'
+            }, 1000, function () {
+               $('.img-5').animate({
                   opacity: '1'
-               }, 500, function () {
-                  $('.img-11').animate({
-                     opacity: '1'
-                  }, function () {
-                     step6();
-                  });
+               }, 1000, function () {
+                  reset();
                });
             });
-         }
-
-         function step6() {
-            // Going Back
-            $('.img-9').animate(function () {
-               opacity: '0'
-            }, 2000);
-            $('.img-10').animate({
-               opacity: '0'
-            }, 2000);
-
-            $('.img-11').animate({
-               opacity: '0'
-            }, 2000, function () {
-               reset();
-            });
-
          }
 
          step1()
@@ -139,46 +86,16 @@
       }
 
       function reset() {
-         console.log('reset done');
          $(".img").stop(true);
 
-         $('.img-4').css({
+         $('.img-3').css({
             top: '100%',
-            left: '0',
+            opacity: '0',
+         });
+         $('.img-4').css({
+            left: '-100%',
          });
          $('.img-5').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-6').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-7').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-8').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-9').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-10').css({
-            top: '0',
-            left: '0',
-            opacity: '0'
-         });
-         $('.img-11').css({
-            top: '0',
-            left: '0',
             opacity: '0'
          });
       }
@@ -187,13 +104,14 @@
       function run() {
 
          init();
-         val = setInterval(init, 13000);
+         val = setInterval(init, 8000);
       }
       run();
 
       document.addEventListener('visibilitychange', function (e) {
          if (document.visibilityState === 'visible') {
             run();
+
          } else {
             clearInterval(val);
             reset();
@@ -201,6 +119,5 @@
       });
    </script>
 </body>
-
 
 </html>
