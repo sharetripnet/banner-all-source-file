@@ -1,7 +1,7 @@
-# Here Have All Kind Creatives Source File.
+# Here Have All Kind Creatives Source File
 
-### Google Web Designer(GWD) Source Files
+- GWD (Google Web Designer) Source Files
 
-### css-js Source Files
+- ad-creator-template
 
-### ifter-time Source File
+- single-ads for individiual creatives/banner item

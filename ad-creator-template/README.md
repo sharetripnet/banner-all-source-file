@@ -36,13 +36,18 @@ gulp
 
 ```python
 
-* Add 'inline' attribute into <link />,<script/>,<img/> tag for inline all code in index.html
-Note: Don not add 'inline' attribute in CDN link for better performance
+1. Add this meta tag <meta name="ad.size" content="width=900,height=90" />
 
-* In Every project you should modify css link in index.njk/index.html
+2. Add jquery from google hosted link - <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+3. Creatives zip file uplaod into https://h5validator.appspot.com/adwords/asset for test
+
+4. Add 'inline' attribute into <link />,<script/>,<img/> tag for inline all code in index.html
+  -- Note: Don not add 'inline' attribute in CDN link for better performance
+
+5. In Every project you should modify css link in index.njk/index.html
 
 # Example:
-
 <img src="./projectFolder/images/img.png" inline />
 <link rel="stylesheet" href="demoProject/assets/style/index.css" inline/>
 <script src="demoProject/assets/scripts/main.js" inline></script>

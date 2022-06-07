@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="ad.size" content="width=728,height=90" />
+
+   <title>Gdn Slider</title>
+
+   <link rel="stylesheet" href="gdn-banner-june/gdn-hotel/728x90/assets/style/style.css" inline>
+</head>
+
+
+<body>
+   <div class="slider_wrapper">
+      <div class="slider_content">
+         <img src="1.png" alt="Image" class="img img-1" />
+         <img src="2.png" alt="Image" class="img img-2" />
+         <img src="3.png" alt="Image" class="img img-3" />
+         <img src="5.png" alt="Image" class="img img-5" />
+      </div>
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script>
+      function init() {
+         function step1() {
+            // Comming
+            $('.img-3').animate({
+               top: '0',
+               opacity: '1'
+            }, 1500, function () {
+               step2();
+            });
+         }
+
+         function step2() {
+            // Comming
+            $('.img-3').animate({
+               top: '0',
+               opacity: '1'
+            }, 1000, function () {
+               step3();
+            });
+         }
+
+         function step3() {
+            // Going Back
+            $('.img-3').animate({
+               opacity: '0',
+               top: '-100%'
+            }, 1000, function () {
+               step4();
+            });
+         }
+
+         function step4() {
+            // Comming
+            $('.img-5').animate({
+               opacity: '1'
+            }, 1000, function () {
+               step5();
+            });
+         }
+
+         function step5() {
+            // Comming
+            $('.img-5').animate({
+               opacity: '1'
+            }, 1000, function () {
+               reset();
+            });
+         }
+
+         step1()
+
+      }
+
+      function reset() {
+         $(".img").stop(true);
+
+         $('.img-3').css({
+            top: '100%',
+            opacity: '0',
+         });
+         $('.img-5').css({
+            opacity: '0'
+         });
+      }
+
+      let val = 0;
+      function run() {
+
+         init();
+         val = setInterval(init, 6000);
+      }
+      run();
+
+      document.addEventListener('visibilitychange', function (e) {
+         if (document.visibilityState === 'visible') {
+            run();
+
+         } else {
+            clearInterval(val);
+            reset();
+         }
+      });
+   </script>
+</body>
+
+</html>
