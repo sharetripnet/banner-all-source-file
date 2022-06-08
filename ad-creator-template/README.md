@@ -32,7 +32,11 @@ or
 gulp
 ```
 
-## Code Instraction
+## All Build templates will be stored inside `./dist` folder
+
+--O--
+
+## Code Instructions
 
 ```python
 
@@ -51,47 +55,33 @@ gulp
 <img src="./projectFolder/images/img.png" inline />
 <link rel="stylesheet" href="demoProject/assets/style/index.css" inline/>
 <script src="demoProject/assets/scripts/main.js" inline></script>
-```
 
-\*\* All Build templates will be stored inside ./dist folder.
+6. Banner Sizes:
 
-## Working Folder Structure:
+# 7 Most Used Banner Sizes
 
-```python
-src
--- projects 1
-    -- assets
-        -- images
-            -- img.png
-        -- scripts
-            -- main.js
-        -- style
-            -- partials
-                _colors.scss
-                _main.scss
-                _reset.scss
-                _variable.scss
-            -- style.scss
-        -- vendor
-    -- index.html
--- projects 2
-    -- assets
-        -- images
-            -- img.png
-        -- scripts
-            -- main.js
-        -- style
-            -- partials
-                _colors.scss
-                _main.scss
-                _reset.scss
-                _variable.scss
-            -- style.scss
-        -- vendor
-    -- index.html
--- index.html
--- index.scss
+300x250,
+336x280,
+250x250,
+160x600,
+300x600,
+728x90,
+970x90
 
+# 12 Most Used Banner Sizes
+
+300x250,
+336x280,
+250x250,
+200x200,
+320x100,
+320x50,
+160x600,
+300x600,
+468x60,
+728x90,
+970x90,
+970x250
 ```
 
 # Note: This template are not working for gwd template
